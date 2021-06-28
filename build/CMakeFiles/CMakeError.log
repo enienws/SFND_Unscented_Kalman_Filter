@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/engin/Documents/sfnd/SFND_Unscented_Kalman_Filter/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c254b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c254b.dir/build.make CMakeFiles/cmTC_c254b.dir/build
+make[1]: Entering directory '/home/engin/Documents/sfnd/SFND_Unscented_Kalman_Filter/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c254b.dir/CheckSymbolExists.c.o
+/usr/bin/x86_64-linux-gnu-gcc-5     -o CMakeFiles/cmTC_c254b.dir/CheckSymbolExists.c.o   -c /home/engin/Documents/sfnd/SFND_Unscented_Kalman_Filter/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c254b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c254b.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-gcc-5       CMakeFiles/cmTC_c254b.dir/CheckSymbolExists.c.o  -o cmTC_c254b -rdynamic 
+CMakeFiles/cmTC_c254b.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c254b.dir/build.make:97: recipe for target 'cmTC_c254b' failed
+make[1]: *** [cmTC_c254b] Error 1
+make[1]: Leaving directory '/home/engin/Documents/sfnd/SFND_Unscented_Kalman_Filter/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c254b/fast' failed
+make: *** [cmTC_c254b/fast] Error 2
+
+File /home/engin/Documents/sfnd/SFND_Unscented_Kalman_Filter/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/engin/Documents/sfnd/SFND_Unscented_Kalman_Filter/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7267f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7267f.dir/build.make CMakeFiles/cmTC_7267f.dir/build
+make[1]: Entering directory '/home/engin/Documents/sfnd/SFND_Unscented_Kalman_Filter/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7267f.dir/CheckFunctionExists.c.o
+/usr/bin/x86_64-linux-gnu-gcc-5    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7267f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7267f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7267f.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-gcc-5   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_7267f.dir/CheckFunctionExists.c.o  -o cmTC_7267f -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7267f.dir/build.make:97: recipe for target 'cmTC_7267f' failed
+make[1]: *** [cmTC_7267f] Error 1
+make[1]: Leaving directory '/home/engin/Documents/sfnd/SFND_Unscented_Kalman_Filter/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7267f/fast' failed
+make: *** [cmTC_7267f/fast] Error 2
+
+
